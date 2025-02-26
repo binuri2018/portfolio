@@ -1,0 +1,57 @@
+.about-me-container {
+    max-width: 800px;
+    margin: 100px auto; 
+    margin-top: 200px; /* Center and add spacing */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px #036396;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .about-me-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #006da4; 
+  }
+  
+  .about-me-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .profile-image {
+    position: relative;
+  }
+  
+  .profile-image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50px;
+  }
+  
+  .profile-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    
+  
+    .profile-image img {
+      width: 50%;
+      height: 50%;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,88 @@
+.contact-container1 {
+  text-align: center;
+  padding: 50px 20px;
+  width: 90% !important;  /* Force override */
+  max-width: 800px !important;  /* Force override */
+  background-color: #010e16;
+  color: white;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: #014b6f;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #006da4;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  width: 80% !important;  /* Ensure full width */
+  max-width: 700px !important;  /* Limit max width */
+  margin: 0 auto;
+  margin-left: 50px;
+}
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 15px !important;
+}
+
+input,
+textarea {
+  width: 100%;  /* Ensure fields take full width */
+  background: #031824;
+  color: white;
+  border: none;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+.submit-btn {
+  background: #024465;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;  
+}
+
+.submit-btn:hover {
+  background: #022b42;
+}
+
+/* 📌 Make form fully responsive for smaller screens */
+@media (max-width: 768px) {
+  .contact-container1 {
+    width: 95%;  /* Reduce width for smaller screens */
+    padding: 30px 15px;
+  }
+
+  .contact-form {
+    max-width: 100%;  /* Allow full width */
+  }
+
+  h3 {
+    font-size: 2rem;  /* Reduce title size */
+  }
+}

@@ -1,0 +1,35 @@
+.education-section {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .education-section h2 {
+    font-size: 2rem;
+    color: #006da4;
+    margin-bottom: 20px;
+  }
+  
+  .education-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #081117;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #003554;
+  }
+  
+  .education-item h3 {
+    font-size: 1.5rem;
+    color: #004161;
+  }
+  
+  .education-item p {
+    font-size: 1rem;
+    color: lightgray;
+  }
+  

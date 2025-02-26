@@ -1,0 +1,41 @@
+.falling-stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.falling-star {
+  position: absolute;
+  top: -10px; /* Start just above the viewport */
+  width: 2px;
+  height: 8px;
+  background: white;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Randomize sizes */
+.falling-star:nth-child(odd) {
+  width: 3px;
+  height: 10px;
+}
+
+.falling-star:nth-child(even) {
+  width: 2px;
+  height: 6px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh); /* Fall to the bottom */
+    opacity: 0;
+  }
+}
