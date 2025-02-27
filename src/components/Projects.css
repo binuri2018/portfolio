@@ -28,7 +28,7 @@
   
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px #020c57;
   }
   
   .project-image {

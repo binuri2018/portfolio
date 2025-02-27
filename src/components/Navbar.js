@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="logo">
         <img src="pp1.jpg" alt="Profile" className="profile-pic" />
         <div className="text">
-          <h1>Binuri</h1>
+          <h1>Your Name</h1>
           <h2>Full Stack Developer</h2>
         </div>
       </div>

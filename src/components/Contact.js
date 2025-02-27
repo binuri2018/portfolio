@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FallingStars from "./FallingStars"; 
 import "./Contact.css";
 
 const Contact = () => {
@@ -16,11 +17,12 @@ const Contact = () => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     alert("Message Sent Successfully!");
-    setFormData({ name: "", email: "", message: "" }); // Clear form after submit
+    setFormData({ name: "", email: "", message: "" }); 
   };
 
   return (
-    <div className="contact-container1">
+    <section id="contact" className="contact-container1">
+      <FallingStars />
       <h2>Get in Touch</h2>
       <h3>Contact</h3>
       <form onSubmit={handleSubmit} className="contact-form">
@@ -55,7 +57,7 @@ const Contact = () => {
 
         <button className="submit-btn" type="submit">Send</button>
       </form>
-    </div>
+    </section>
   );
 };
 

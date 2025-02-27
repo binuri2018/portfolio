@@ -1,12 +1,21 @@
 .contact-container1 {
   text-align: center;
   padding: 50px 20px;
-  width: 90% !important;  /* Force override */
-  max-width: 800px !important;  /* Force override */
+  width: 90% !important;  
+  max-width: 800px !important;  
   background-color: #010e16;
   color: white;
   border-radius: 12px;
   margin: 0 auto;
+  z-index: 1;
+}
+.contact-container1 canvas { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 h2 {
@@ -24,8 +33,8 @@ h3 {
 }
 
 .contact-form {
-  width: 80% !important;  /* Ensure full width */
-  max-width: 700px !important;  /* Limit max width */
+  width: 80% !important;  
+  max-width: 700px !important; 
   margin: 0 auto;
   margin-left: 50px;
 }
@@ -38,7 +47,7 @@ label {
 
 input,
 textarea {
-  width: 100%;  /* Ensure fields take full width */
+  width: 100%;  
   background: #031824;
   color: white;
   border: none;
@@ -71,18 +80,18 @@ textarea {
   background: #022b42;
 }
 
-/* 📌 Make form fully responsive for smaller screens */
+
 @media (max-width: 768px) {
   .contact-container1 {
-    width: 95%;  /* Reduce width for smaller screens */
+    width: 95%;  
     padding: 30px 15px;
   }
 
   .contact-form {
-    max-width: 100%;  /* Allow full width */
+    max-width: 100%;  
   }
 
   h3 {
-    font-size: 2rem;  /* Reduce title size */
+    font-size: 2rem;  
   }
 }

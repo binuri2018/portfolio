@@ -10,7 +10,7 @@
 
 .falling-star {
   position: absolute;
-  top: -10px; /* Start just above the viewport */
+  top: -10px; 
   width: 2px;
   height: 8px;
   background: white;
@@ -18,10 +18,10 @@
   animation: fall linear infinite;
 }
 
-/* Randomize sizes */
+
 .falling-star:nth-child(odd) {
-  width: 3px;
-  height: 10px;
+  width: 1px;
+  height: 1px;
 }
 
 .falling-star:nth-child(even) {

@@ -5,6 +5,7 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   
 }
 .content-section {
@@ -14,13 +15,24 @@ body, html {
   justify-content: center;
   text-align: center;
   position: relative;
-  z-index: 2; 
+  z-index: 1; 
+  min-height: 100vh;
   padding: 50px 20px;
+}
+
+canvas {
+  position: absolute !important; /* Forces canvas to stay in background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures it's behind content */
 }
 
 .content {
   margin-top: 300px;
   margin-bottom: 20px;
+  z-index: 2;
   color: rgb(255, 255, 255); 
 }
   h1 {

@@ -1,31 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./FallingStars.css";
 
 const FallingStars = () => {
-  const stars = new Array(50).fill(0); // Generate 50 stars
+  useEffect(() => {
+    const aboutMeSection = document.querySelector(".contact-container1"); // Target About Me section
+    if (!aboutMeSection) return;
 
-  return (
-    <div className="falling-stars-container">
-      {stars.map((_, index) => {
-        const randomLeft = Math.random() * 100; // Randomize horizontal position (0-100vw)
-        const randomDelay = Math.random() * 5; // Random delay (0-5s)
-        const randomDuration = 2 + Math.random() * 3; // Random fall speed (2s-5s)
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
 
-        return (
-          <div
-            key={index}
-            className="falling-star"
-            style={{
-              left: `${randomLeft}vw`, // Position anywhere horizontally
-              animationDelay: `-${randomDelay}s`, // Random delay for natural effect
-              animationDuration: `${randomDuration}s`, // Different speeds
-            }}
-          />
-          
-        );
-      })}
-    </div>
-  );
+    canvas.width = aboutMeSection.offsetWidth;
+    canvas.height = aboutMeSection.offsetHeight;
+    canvas.style.position = "absolute";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    canvas.style.zIndex = "-1"; // Keeps it behind content
+
+    aboutMeSection.style.position = "relative"; // Ensure About Me section is positioned
+    aboutMeSection.prepend(canvas); // Add canvas inside About Me section
+
+    const stars = Array.from({ length: 50 }).map(() => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      speed: Math.random() * 2 + 1,
+      size: Math.random() * 2 + 1,
+    }));
+
+    const drawStars = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+      stars.forEach((star) => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) star.y = 0;
+      });
+      requestAnimationFrame(drawStars);
+    };
+
+    drawStars();
+
+    return () => {
+      canvas.remove(); // Clean up when unmounting
+    };
+  }, []);
+
+  return null; // No visible elements, just the background effect
 };
 
 export default FallingStars;

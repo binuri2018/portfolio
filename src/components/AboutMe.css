@@ -1,9 +1,9 @@
 .about-me-container {
     max-width: 800px;
     margin: 100px auto; 
-    margin-top: 200px; /* Center and add spacing */
+    margin-top: 20px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    background: rgba(0, 0, 0, 0.8); 
     border-radius: 10px;
     box-shadow: 0 0 15px #036396;
     text-align: center;
