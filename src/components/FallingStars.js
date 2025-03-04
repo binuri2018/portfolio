@@ -16,7 +16,7 @@ const FallingStars = () => {
     canvas.style.left = "0";
     canvas.style.width = "100%";
     canvas.style.height = "100%";
-    canvas.style.zIndex = "-1"; // Keeps it behind content
+    canvas.style.zIndex = "-1"; 
 
     aboutMeSection.style.position = "relative"; // Ensure About Me section is positioned
     aboutMeSection.prepend(canvas); // Add canvas inside About Me section

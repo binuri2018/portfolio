@@ -1,12 +1,12 @@
 import React from "react";
-import { Element } from "react-scroll"; 
+import { Element } from "react-scroll";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import NeonCursor from "./components/NeonCursor"; 
+import NeonCursor from "./components/NeonCursor";
 import "./App.css";
 
 function App() {
@@ -26,18 +26,18 @@ function App() {
 
       <div className="content-section1">
         
-        <Element name="about">
+        <Element name="about" className="section">
           <AboutMe />
         </Element>
 
-        <Education /> 
+        <Education />
         <Skills />
 
-        <Element name="projects">
+        <Element name="projects" className="section">
           <Projects />
         </Element>
 
-        <Element name="contact">
+        <Element name="contact" className="section">
           <Contact />
         </Element>
       </div>
