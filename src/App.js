@@ -25,21 +25,18 @@ function App() {
       </div>
 
       <div className="content-section1">
-        
-        <Element name="about" className="section">
-          <AboutMe />
-        </Element>
+      <Element name="about">
+        <AboutMe />
+      </Element>
+      <Education/>
+      <Skills/>
+      <Element name="projects">
+        <Projects />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
 
-        <Education />
-        <Skills />
-
-        <Element name="projects" className="section">
-          <Projects />
-        </Element>
-
-        <Element name="contact" className="section">
-          <Contact />
-        </Element>
       </div>
     </div>
   );

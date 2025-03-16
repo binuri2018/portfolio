@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import FallingStars from "./FallingStars"; 
 import "./Contact.css";
 
@@ -9,15 +10,38 @@ const Contact = () => {
     message: "",
   });
 
+  const [isSending, setIsSending] = useState(false); // State to track sending status
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Message Sent Successfully!");
-    setFormData({ name: "", email: "", message: "" }); 
+    setIsSending(true);
+
+    // EmailJS Configuration
+    const serviceID = "service_cxvf2se";
+    const templateID = "template_caiw43f";
+    const publicKey = "LUoeuVKYmpQmzxyIO";
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email Sent Successfully!", response);
+        alert("Message Sent Successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        alert("Failed to send message. Please try again.");
+      })
+      .finally(() => setIsSending(false));
   };
 
   return (
@@ -55,7 +79,9 @@ const Contact = () => {
           required
         ></textarea>
 
-        <button className="submit-btn" type="submit">Send</button>
+        <button className="submit-btn" type="submit" disabled={isSending}>
+          {isSending ? "Sending..." : "Send"}
+        </button>
       </form>
     </section>
   );

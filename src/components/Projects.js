@@ -44,6 +44,12 @@ const projectsData = [
     image: "/projects/om.png",
     tags: ["React.js", "CSS","MongoDB"],
   },
+  {
+    name: "Deep Work",
+    description: "A count down timer with pomodoro technique with features to being notified when time is up and ability to adjust the time or change the background according to the mood.",
+    image: "/projects/deepwork.png",
+    tags: ["React.js", "CSS"],
+  },
 ];
 
 const Projects = () => {

@@ -6,6 +6,7 @@ body, html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   
 }
 .content-section {
@@ -61,4 +62,15 @@ canvas {
     background: #022b42; 
   }
   
+  .container {
+    overflow: auto;
+  }
   
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+  }
