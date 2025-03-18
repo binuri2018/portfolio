@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.8); /* Transparent background */
+  background: #024465;  
   padding: 15px 40px;
   color: white;
   z-index: 1000;
