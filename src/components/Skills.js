@@ -1,27 +1,42 @@
 import React from "react";
 import "./Skills.css";
 
+// Import all logos from your local src/components/Assets/logos/ directory
+import jsLogo from "./Assets/logos/js.png";
+import cssLogo from "./Assets/logos/css.png";
+import htmlLogo from "./Assets/logos/html.png";
+import cppLogo from "./Assets/logos/cpp.png";
+import javaLogo from "./Assets/logos/java.png";
+import kotlinLogo from "./Assets/logos/kotlin.png";
+import pythonLogo from "./Assets/logos/python.png";
+
+import reactLogo from "./Assets/logos/react.png";
+import expressLogo from "./Assets/logos/express.png";
+import tailwindLogo from "./Assets/logos/tailwind.png";
+import bootstrapLogo from "./Assets/logos/bootstrap.png";
+
 const skillsData = [
-    { name: "JavaScript", logo: "/logos/js.png" },
-    { name: "CSS 3", logo: "/logos/css.png" },
-    { name: "HTML 5", logo: "/logos/html.png" },
-    { name: "C++", logo: "/logos/cpp.png" },
-    { name: "Java", logo: "/logos/java.png" },
-    { name: "Kotlin", logo: "/logos/kotlin.png" },
-    { name: "Python", logo: "/logos/python.png" },
-  ];
-  
-  const frameworksData = [
-    { name: "React.js", logo: "/logos/react.png" },
-    { name: "Express.js", logo: "/logos/express.png" },
-    { name: "Tailwind CSS", logo: "/logos/tailwind.png" },
-    { name: "Bootstrap", logo: "/logos/bootstrap.png" },
-  ];
-  
+  { name: "JavaScript", logo: jsLogo },
+  { name: "CSS 3", logo: cssLogo },
+  { name: "HTML 5", logo: htmlLogo },
+  { name: "C++", logo: cppLogo },
+  { name: "Java", logo: javaLogo },
+  { name: "Kotlin", logo: kotlinLogo },
+  { name: "Python", logo: pythonLogo },
+];
+
+const frameworksData = [
+  { name: "React.js", logo: reactLogo },
+  { name: "Express.js", logo: expressLogo },
+  { name: "Tailwind CSS", logo: tailwindLogo },
+  { name: "Bootstrap", logo: bootstrapLogo },
+];
+
 const Skills = () => {
   return (
     <div className="skills-section">
       <h2 className="skills-title">Languages & Frameworks</h2>
+
       {/* Languages */}
       <div className="skills-category">
         <h3>Languages</h3>

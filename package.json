@@ -13,6 +13,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.3",
     "react-tsparticles": "^2.12.2",
+    "threejs-toys": "^0.0.8",
     "tsparticles-engine": "^2.12.0",
     "tsparticles-preset-links": "^2.12.0"
   },

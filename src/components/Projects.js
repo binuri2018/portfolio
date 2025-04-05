@@ -1,53 +1,58 @@
 import React from "react";
 import "./Projects.css";
 
+// Correct relative path to images inside src/components/Assets/projects/
+import ecomImage from "./Assets/projects/ecom.png";
+import kanbanImage from "./Assets/projects/kanban.png";
+import doitImage from "./Assets/projects/doit.png";
+//import blogmeImage from "./Assets/projects/blogme.png";
+import memoImage from "./Assets/projects/memo.png";
+import tictactoeImage from "./Assets/projects/tictactoe.png";
+import omImage from "./Assets/projects/om.png";
+import deepworkImage from "./Assets/projects/deepwork.png";
+
 const projectsData = [
   {
     name: "Crystal Chandelier",
     description: "Clothing website built with the MERN stack for online shopping.",
-    image: "/projects/ecom.png", 
+    image: ecomImage,
     tags: ["React.js", "Node.js", "MongoDB", "CSS"],
   },
   {
     name: "Workflow Management System",
     description: "Workflow management system with user roles and task tracking.",
-    image: "/projects/kanban.png",
+    image: kanbanImage,
     tags: ["React.js", "Node.js", "MongoDB"],
   },
   {
     name: "Do-It",
     description: "A mobile to-do list application for managing tasks efficiently.",
-    image: "/projects/doit.png",
+    image: doitImage,
     tags: ["Kotlin", "Mobile App"],
   },
   {
-    name: "Blog Me",
-    description: "A simple frontend blogging web app with a clean UI.",
-    image: "/projects/blogme.png",
-    tags: ["React.js", "CSS"],
-  },
-  {
     name: "Memo-Cards",
-    description: "A simple frontend blogging web app with a clean UI.",
-    image: "/projects/memo.png",
+    description: "A simple memory card game built using React.",
+    image: memoImage,
     tags: ["React.js", "CSS"],
   },
   {
     name: "Tic-Tac-Toe",
-    description: "A simple frontend blogging web app with a clean UI.",
-    image: "/projects/tictactoe.png",
+    description: "A simple React-based Tic Tac Toe game.",
+    image: tictactoeImage,
     tags: ["React.js", "CSS"],
   },
   {
     name: "Organizer Management System",
-    description: "A simple frontend blogging web app with a clean UI.",
-    image: "/projects/om.png",
-    tags: ["React.js", "CSS","MongoDB"],
+    description: "A web-based organizer tool to manage events and users.",
+    image: omImage,
+    tags: ["React.js", "CSS", "MongoDB"],
   },
   {
     name: "Deep Work",
-    description: "A count down timer with pomodoro technique with features to being notified when time is up and ability to adjust the time or change the background according to the mood.",
-    image: "/projects/deepwork.png",
+    description:
+      "A Pomodoro-style timer that helps improve focus with mood-based backgrounds and notifications.",
+    image: deepworkImage,
     tags: ["React.js", "CSS"],
   },
 ];
