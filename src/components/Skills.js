@@ -14,6 +14,7 @@ import reactLogo from "./Assets/logos/react.png";
 import expressLogo from "./Assets/logos/express.png";
 import tailwindLogo from "./Assets/logos/tailwind.png";
 import bootstrapLogo from "./Assets/logos/bootstrap.png";
+import springbootLogo from "./Assets/logos/SPboot.png";
 
 const skillsData = [
   { name: "JavaScript", logo: jsLogo },
@@ -30,6 +31,7 @@ const frameworksData = [
   { name: "Express.js", logo: expressLogo },
   { name: "Tailwind CSS", logo: tailwindLogo },
   { name: "Bootstrap", logo: bootstrapLogo },
+  { name: "Spring Boot", logo: springbootLogo },
 ];
 
 const Skills = () => {

@@ -37,19 +37,14 @@ const AboutMe = () => {
 
         <div className="about-me-text">
           <p>
-            I'm an IT undergraduate with a passion for developing efficient and scalable web applications 
-            that enhance user experience and business success. A dedicated and self-motivated individual, 
-            I thrive on solving complex problems and continuously expanding my technical skills.
-          </p>
-          <p>
-            I have experience working with the MERN stack and enjoy building innovative solutions that 
-            streamline processes. With a flexible and enthusiastic approach, I adapt quickly to new 
-            challenges and always strive for improvement. My strong interpersonal and communication skills 
-            help me collaborate effectively with teams, making me a valuable contributor in any development environment.
-          </p>
-          <p>
-            Currently, I'm seeking an opportunity as a software engineering intern to apply my skills, 
-            learn from industry professionals, and contribute to impactful projects.
+          I'm an IT undergraduate passionate about 
+          software engineering and web development. 
+          I enjoy building efficient, user-focused applications
+           that solve real-world problems. With a strong foundation 
+           in full-stack development, I thrive in collaborative environments 
+           and adapt quickly to new technologies.
+            My professional strengths include problem-solving, attention to detail, 
+            effective communication, and a continuous drive to improve and innovate.
           </p>
         </div>
       </div>

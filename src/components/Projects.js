@@ -14,44 +14,43 @@ import deepworkImage from "./Assets/projects/deepwork.png";
 const projectsData = [
   {
     name: "Crystal Chandelier",
-    description: "Clothing website built with the MERN stack for online shopping.",
+    description: "Full-featured e-commerce platform with secure authentication, item management, and dynamic cart functionality for a smooth shopping experience.",
     image: ecomImage,
     tags: ["React.js", "Node.js", "MongoDB", "CSS"],
   },
   {
     name: "Workflow Management System",
-    description: "Workflow management system with user roles and task tracking.",
+    description: "Employee work management system enabling admins to add projects, assign tasks, and manage employee workloads using a Kanban-style interface..",
     image: kanbanImage,
     tags: ["React.js", "Node.js", "MongoDB"],
   },
   {
     name: "Do-It",
-    description: "A mobile to-do list application for managing tasks efficiently.",
+    description: "A mobile-friendly to-do list app with intuitive task creation, editing, and tracking to improve personal productivity and daily planning.",
     image: doitImage,
     tags: ["Kotlin", "Mobile App"],
   },
   {
     name: "Memo-Cards",
-    description: "A simple memory card game built using React.",
+    description: "Interactive flashcard app for quick learning and memory practice, allowing users to create, view, and flip digital memo cards.",
     image: memoImage,
     tags: ["React.js", "CSS"],
   },
   {
     name: "Tic-Tac-Toe",
-    description: "A simple React-based Tic Tac Toe game.",
+    description: "Classic two-player Tic Tac Toe game built with responsive design and smooth user interaction for a fun, lightweight gaming experience.",
     image: tictactoeImage,
     tags: ["React.js", "CSS"],
   },
   {
     name: "Organizer Management System",
-    description: "A web-based organizer tool to manage events and users.",
+    description: "Web app to assign tasks to event organizers with automatic notifications and a centralized system to monitor task completion and status.",
     image: omImage,
     tags: ["React.js", "CSS", "MongoDB"],
   },
   {
     name: "Deep Work",
-    description:
-      "A Pomodoro-style timer that helps improve focus with mood-based backgrounds and notifications.",
+    description: "Custom countdown timer with real-time updates and a built-in alarm notification system, ideal for productivity and time-bound activities.",
     image: deepworkImage,
     tags: ["React.js", "CSS"],
   },
