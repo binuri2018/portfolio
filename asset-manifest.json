@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.29c99470.css",
-    "main.js": "/portfolio/static/js/main.b9e3dbcc.js",
+    "main.css": "/portfolio/static/css/main.b441ab37.css",
+    "main.js": "/portfolio/static/js/main.b1124c27.js",
     "static/media/deepwork.png": "/portfolio/static/media/deepwork.8a49549f485bf28f3f41.png",
     "static/media/ecom.png": "/portfolio/static/media/ecom.80212a3fd15940183a72.png",
     "static/media/cv.jpg": "/portfolio/static/media/cv.d5f10234b1fd4528ef02.jpg",
@@ -11,6 +11,8 @@
     "static/media/kanban.png": "/portfolio/static/media/kanban.5057fda3158aaa4bdfaa.png",
     "static/media/om.png": "/portfolio/static/media/om.5bc3a8c90021482faf58.png",
     "static/media/js.png": "/portfolio/static/media/js.e3d9709efa97a467f811.png",
+    "static/media/AMCC.png": "/portfolio/static/media/AMCC.b61307c1ce354c9d389a.png",
+    "static/media/SLIIT.png": "/portfolio/static/media/SLIIT.c3813a41ccfbf3ca99f8.png",
     "static/media/cpp.png": "/portfolio/static/media/cpp.70896e17968e2353976d.png",
     "static/media/pp1.jpg": "/portfolio/static/media/pp1.d4060c1805a816f90d3c.jpg",
     "static/media/react.png": "/portfolio/static/media/react.3200fefd3a68ed946e8a.png",
@@ -24,11 +26,11 @@
     "static/media/express.png": "/portfolio/static/media/express.3bcb6b7296c75391b631.png",
     "static/media/SPboot.png": "/portfolio/static/media/SPboot.dab2a3196d0ae9cfe8bf.png",
     "index.html": "/portfolio/index.html",
-    "main.29c99470.css.map": "/portfolio/static/css/main.29c99470.css.map",
-    "main.b9e3dbcc.js.map": "/portfolio/static/js/main.b9e3dbcc.js.map"
+    "main.b441ab37.css.map": "/portfolio/static/css/main.b441ab37.css.map",
+    "main.b1124c27.js.map": "/portfolio/static/js/main.b1124c27.js.map"
   },
   "entrypoints": [
-    "static/css/main.29c99470.css",
-    "static/js/main.b9e3dbcc.js"
+    "static/css/main.b441ab37.css",
+    "static/js/main.b1124c27.js"
   ]
 }
