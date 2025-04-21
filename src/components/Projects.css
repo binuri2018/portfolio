@@ -1,7 +1,6 @@
 .projects-container {
     text-align: center;
     padding: 50px 20px;
-    background-color: black;
     color: white;
   }
   
@@ -77,5 +76,15 @@
   .github-link:hover {
     color: #007acc;
     text-decoration: underline;
+  }
+  
+  .projects-intro {
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 2.5rem;
+    color: rgb(107, 107, 134);
   }
   

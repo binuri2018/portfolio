@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="navbar-left">
         <img src={profilePic} alt="Profile" className="profile-pic" />
         <div className="navbar-info">
-          <h2>Binuri</h2>
+          <h2>Binuri Manodya</h2>
           <p>Full Stack Developer</p>
         </div>
       </div>

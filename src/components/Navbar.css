@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #024465;  
   padding: 15px 40px;
   color: white;
   z-index: 1000;
@@ -30,12 +29,14 @@
 
 .navbar-info h2 {
   font-size: 18px;
+  color: rgb(47, 109, 255);
   margin: 0;
   font-weight: bold;
 }
 
 .navbar-info p {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   color: #ccc;
 }
