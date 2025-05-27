@@ -11,6 +11,7 @@ import memoImage from "./Assets/projects/memo.png";
 import tictactoeImage from "./Assets/projects/tictactoe.png";
 import omImage from "./Assets/projects/om.png";
 import deepworkImage from "./Assets/projects/deepwork.png";
+import blogmeImage from "./Assets/projects/blogme.png";
 
 // Data with GitHub links
 const projectsData = [
@@ -70,6 +71,13 @@ const projectsData = [
     tags: ["React.js", "Tailwind CSS", "SpringBoot","MongoDB"],
     github: "https://github.com/binuri2018/Task-Hive"
   },
+  {
+    name: "Blog Me",
+    description: "A modern, responsive blogging platform built with React and Firebase, offering a seamless experience for both writers and readers. Blog Me combines elegant design with powerful features to create an engaging blogging environment.",
+    image: blogmeImage,
+    tags: ["React.js", "CSS", "Firebase"],
+    github: "https://github.com/binuri2018/blog-me.git"
+  },
 ];
 
 const Projects = () => {
@@ -95,6 +103,12 @@ const Projects = () => {
         ease: "easeOut"
       }
     }
+  };
+
+  const handleGitHubClick = (e, url) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -147,15 +161,19 @@ const Projects = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <a
+                  <motion.a
                     href={project.github}
-                    className="project-link"
+                    onClick={(e) => handleGitHubClick(e, project.github)}
+                    className="project-link github-link-overlay"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${project.name} on GitHub`}
+                    aria-label={`View ${project.name} source code on GitHub`}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <FaGithub />
-                  </a>
+                    <span>View on GitHub</span>
+                  </motion.a>
                 </motion.div>
               )}
             </div>
@@ -175,18 +193,6 @@ const Projects = () => {
                   </motion.span>
                 ))}
               </div>
-              <motion.a
-                href={project.github}
-                className="github-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FaGithub />
-                <span>View on GitHub</span>
-                <FaExternalLinkAlt />
-              </motion.a>
             </div>
           </motion.div>
         ))}
