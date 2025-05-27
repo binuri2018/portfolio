@@ -1,90 +1,225 @@
 .projects-container {
-    text-align: center;
-    padding: 50px 20px;
-    color: white;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.projects-container h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+.projects-intro {
+  font-size: var(--font-size-body);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: var(--spacing-lg) auto;
+  color: var(--text-secondary);
+  padding: 0 var(--spacing-md);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  perspective: 1000px;
+}
+
+.project-card {
+  background: var(--glass-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  box-shadow: var(--glass-shadow);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-details {
+  padding: var(--spacing-md);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 6, 30, 0.8) 0%,
+    rgba(0, 6, 30, 0.95) 100%
+  );
+}
+
+.project-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-sm) 0;
+}
+
+.tag {
+  background: var(--surface);
+  color: var(--secondary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  border: 1px solid var(--glass-border);
+}
+
+.tag:hover {
+  background: var(--primary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--spacing-sm);
+  padding: 8px 20px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  background: var(--primary);
+  border-radius: 8px;
+  transition: var(--transition-normal);
+  border: 1px solid var(--glass-border);
+}
+
+.github-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .projects-container h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #006da4;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    grid-template-columns: 1fr;
+    padding: var(--spacing-sm);
   }
-  
+
   .project-card {
-    background: #001624;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
+    margin: 0 auto;
   }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px #020c57;
-  }
-  
-  .project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .project-details {
-    padding: 15px;
-  }
-  
-  .project-details h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #035c7c;
-  }
-  
-  .project-details p {
-    font-size: 1rem;
-    color: #ccc;
-  }
-  
-  .project-tags {
-    margin-top: 10px;
-  }
-  
-  .tag {
-    
-    color: #01c923;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    margin: 5px;
-    display: inline-block;
-  }
-  .github-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .github-link:hover {
-    color: #007acc;
-    text-decoration: underline;
-  }
-  
+
   .projects-intro {
-    font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
-    line-height: 1.6;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 2.5rem;
-    color: rgb(107, 107, 134);
+    padding: 0 var(--spacing-sm);
+    font-size: 1rem;
   }
+}
+
+/* Hover Effects */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
   
