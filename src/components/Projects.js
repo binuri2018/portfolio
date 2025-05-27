@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./Projects.css";
 
 // Images
@@ -61,43 +63,134 @@ const projectsData = [
     tags: ["React.js", "CSS"],
     github: "https://github.com/binuri2018/Deep_Work"
   },
+  {
+    name: "Task Hive",
+    description: "A full-stack skill-sharing and learning platform where users can share their expertise through multimedia posts, follow others, and engage through comments, likes, and notifications. The platform also supports creating structured learning plans and sharing progress updates, with secure login and user-friendly interaction features.",
+    image: deepworkImage,
+    tags: ["React.js", "Tailwind CSS", "SpringBoot","MongoDB"],
+    github: "https://github.com/binuri2018/Task-Hive"
+  },
 ];
 
 const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const projectVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="projects" className="projects-container">
-      <h2>My Projects</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        My Projects
+      </motion.h2>
 
-      <p className="projects-intro">
+      <motion.p
+        className="projects-intro"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         Following projects showcases my skills and experience through real-world examples of my work. 
         Each project is briefly described with links to code repositories and live demos in it. 
         It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
-      </p>
+      </motion.p>
       
-      <div className="projects-grid">
+      <motion.div
+        className="projects-grid"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {projectsData.map((project, index) => (
-          <div key={index} className="project-card">
-            <img src={project.image} alt={project.name} className="project-image" />
+          <motion.div
+            key={index}
+            className="project-card"
+            variants={projectVariants}
+            onHoverStart={() => setHoveredProject(index)}
+            onHoverEnd={() => setHoveredProject(null)}
+            whileHover={{ scale: 1.02 }}
+          >
+            <div className="project-image-container">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-image"
+                loading="lazy"
+              />
+              {hoveredProject === index && (
+                <motion.div
+                  className="project-overlay"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <a
+                    href={project.github}
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.name} on GitHub`}
+                  >
+                    <FaGithub />
+                  </a>
+                </motion.div>
+              )}
+            </div>
+            
             <div className="project-details">
               <h3>{project.name}</h3>
               <p>{project.description}</p>
               <div className="project-tags">
                 {project.tags.map((tag, idx) => (
-                  <span key={idx} className="tag">#{tag}</span>
+                  <motion.span
+                    key={idx}
+                    className="tag"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    #{tag}
+                  </motion.span>
                 ))}
               </div>
-              <a
+              <motion.a
                 href={project.github}
                 className="github-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                🔗 View on GitHub
-              </a>
+                <FaGithub />
+                <span>View on GitHub</span>
+                <FaExternalLinkAlt />
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
