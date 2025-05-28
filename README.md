@@ -1,7 +1,5 @@
 # Modern React Portfolio
 
-![Portfolio Preview](./my-portfolio/src/components/Assets/portfolio.png)
-
 A modern, responsive portfolio website built with React.js, showcasing my projects, skills, and professional journey. This portfolio features a clean, minimalist design with smooth animations and an intuitive user interface.
 
 ## ✨ Features
@@ -23,7 +21,7 @@ A modern, responsive portfolio website built with React.js, showcasing my projec
 - **Animations**: Framer Motion
 - **Icons**: React Icons
 - **Version Control**: Git & GitHub
-- **Deployment**: Vercel/Netlify
+- **Deployment**:GitHub pages
 
 ## 📦 Project Structure
 
