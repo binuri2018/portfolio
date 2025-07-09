@@ -65,13 +65,6 @@ const projectsData = [
     github: "https://github.com/binuri2018/Deep_Work"
   },
   {
-    name: "Task Hive",
-    description: "A full-stack skill-sharing and learning platform where users can share their expertise through multimedia posts, follow others, and engage through comments, likes, and notifications. The platform also supports creating structured learning plans and sharing progress updates, with secure login and user-friendly interaction features.",
-    image: deepworkImage,
-    tags: ["React.js", "Tailwind CSS", "SpringBoot","MongoDB"],
-    github: "https://github.com/binuri2018/Task-Hive"
-  },
-  {
     name: "Blog Me",
     description: "A modern, responsive blogging platform built with React and Firebase, offering a seamless experience for both writers and readers. Blog Me combines elegant design with powerful features to create an engaging blogging environment.",
     image: blogmeImage,
